@@ -39,7 +39,7 @@ function updateHero() {
     document.querySelector('.typing-text').textContent = hero.greeting;
     document.querySelector('.main-title').textContent = hero.name;
     document.querySelector('.subtitle').textContent = hero.title;
-    
+
     // Update contact chips
     const contactChips = document.querySelector('.contact-chips');
     contactChips.innerHTML = `
@@ -49,7 +49,7 @@ function updateHero() {
         </a>
         <a href="${config.contact.linkedin}" class="contact-chip">
             <i class="fab fa-linkedin"></i>
-            <span>${config.contact.linkedin.split('/').pop()}</span>
+            <span>${'Neha Bhatt'}</span>
         </a>
     `;
 
@@ -120,8 +120,7 @@ function updateProjects() {
             <div class="title-underline"></div>
             <div class="description-container">
                 <p class="section-description">
-                    Explore my portfolio of innovative projects, from personal ventures to client collaborations, each with detailed case studies
-                </p>
+Explore my portfolio of innovative projects, from personal ventures to internal projects created using my skills, each with detailed case studies showcasing the process and results                </p>
             </div>
         </div>
         <div class="projects-grid">
@@ -254,9 +253,10 @@ function openCertificateModal(certificateName) {
 
     // Get certificate file info based on certificate name
     const certificateId = certificate.name.toLowerCase().replace(/\s+/g, '-');
+
     const certificateFile = {
         path: `/images/certificates/${certificateId}.jpeg`,
-        type: 'image/jpeg/png'
+        type: 'image'
     };
 
     if (certificateFile) {
@@ -268,7 +268,7 @@ function openCertificateModal(certificateName) {
             modalPDF.style.display = 'none';
             modalImage.style.display = 'block';
             modalImage.src = certificateFile.path;
-            modal.style.cursor='pointer'
+            modal.style.cursor = 'pointer'
         }
     }
 
@@ -312,7 +312,8 @@ function getSkillIcon(skill) {
         'CI/CD Pipelines': 'fas fa-code-branch',
         'Agile Methodology': 'fas fa-tasks',
         'Problem Solving': 'fas fa-lightbulb',
-        'Good Communication': 'fas fa-comments'
+        'Good Communication': 'fas fa-comments',
+        'AWS':'fa-brands fa-aws'
     };
     return icons[skill] || 'fas fa-code';
 }

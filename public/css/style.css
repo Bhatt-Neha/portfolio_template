@@ -86,7 +86,7 @@ body {
 }
 
 .main-title {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: 2px;
@@ -189,7 +189,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-bottom: 1.5rem;
     position: relative;
 }
 
@@ -198,7 +197,7 @@ body {
     position: relative;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 0;
     animation: typing var(--typing-speed) steps(40) forwards;
 }
@@ -216,7 +215,7 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     opacity: 0;
     animation: typing var(--typing-speed) steps(40) forwards;
@@ -548,6 +547,10 @@ body {
 
 .skill-list li .fa-server {
     color: #FFD700;
+}
+
+.skill-list li .fa-aws {
+    color: white
 }
 
 .skill-list li .fa-database {

@@ -1,47 +1,61 @@
 // Project data
 const projectsData = {
-    'project 1': {
-        title: 'Project 1',
-        description: 'Project 1 description',
+    'cookeasy': {
+        
+        title: 'CookEasy',
+        description: `✨ Chef Booking: Users can book chefs based on their preferred cuisines and time slots.
+✨ Recipe Exploration: Users can discover and filter recipes based on their cuisine preferences.
+✨ Instant Confirmation: Real-time email notifications are sent upon successful bookings.
+✨ Ratings & Reviews: Users can rate and review chefs, making it easier for others to choose the best.
+✨ Enhanced Experience: Ensures a seamless and user-friendly platform for personalized cooking and culinary exploration.`,
         technologies: [
             { name: 'next.js', icon: 'fab fa-react' },
             { name: 'Node.js', icon: 'fab fa-node-js' },
-            {name:'PostgreSQL', icon:'fas fa-database'},
-            {name:'scss', icon:'fas fa-palette'},
-               
-        ],
-        images: [
-            '/images/logo.png',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
+            { name: 'PostgreSQL', icon: 'fas fa-database' },
+            { name: 'scss', icon: 'fas fa-palette' },
 
         ],
-        githubLink: 'https://github.com/username/project1'
+        images: [
+            '/images/cookeasy/home.png',
+            '/images/cookeasy/register.png',
+            '/images/cookeasy/login.png',
+            '/images/cookeasy/recipe.png',
+            '/images/cookeasy/chef.png',
+            '/images/cookeasy/booking.png',
+            '/images/cookeasy/confirmation.png',
+            '/images/cookeasy/rating.png'
+
+        ],
+        githubLink: "https://github.com/Bhatt-Neha/Cookeasy"
     },
 
-    'project 2': {
-        title: 'Project 2',
-        description: 'Project 2 description',
+    'portfolio template': {
+        title: 'Portfolio Template',
+        description: `✨ Dynamic & Reusable: Easily customizable for different specializations.
+✨ Config-Based Customization: Users can update their data through a config file.
+✨ Responsive UI: Ensures seamless performance across all devices.
+✨ Smooth Animations: Enhances user engagement with eye-catching effects.
+✨ Customizable Sections: Modify and personalize portfolio content effortlessly.
+✨ CSS-Powered Effects: Provides visually appealing transitions and designs`,
         technologies: [
-            { name: 'next.js', icon: 'fab fa-react' },
-            {name:'scss', icon:'fas fa-palette'},
-               
-        ],
-        images: [
-            '/images/logo.png',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
-            '/images/project2.jpg',
+            { name: 'javascript', icon: 'fab fa-js' },
+            { name: 'html', icon: 'fab fa-html5' },
+            { name: 'node.js', icon: 'fab fa-node' },
+            { name: 'css', icon: 'fas fa-palette' },
+
 
         ],
-        githubLink: 'https://github.com/username/project2'
+        images: [
+            '/images/portfolio_template/about.png',
+            '/images/portfolio_template/skills.png',
+            '/images/portfolio_template/project.png',
+            '/images/portfolio_template/work.png',
+            '/images/portfolio_template/project.png',
+            '/images/portfolio_template/Certificate.png',
+
+
+        ],
+        githubLink: "https://github.com/Bhatt-Neha/portfolio_template"
     },
 };
 
@@ -75,27 +89,35 @@ function prevSlide() {
 // Load project details
 function loadProjectDetails(projectId) {
     const project = projectsData[projectId];
-    
+
     if (!project) {
         window.location.href = 'index.html#projects';
         return;
     }
 
     // Update page title
-    document.title = `${project.title} - Name`;
-    
+    document.title = `${project.title} - Neha Bhatt`;
+
     // Update project title
     document.querySelector('.project-title').textContent = project.title;
-    
+
     // Load images into slider
     const imageSlider = document.querySelector('.image-slider');
     imageSlider.innerHTML = project.images
         .map(img => `<img src="${img}" alt="Project screenshot">`)
         .join('');
     
-    // Update description
-    document.querySelector('.project-description').textContent = project.description.replace(/\. /g, '.\n');
-    
+    // Update description with new line formatting
+    const descriptionContainer = document.querySelector('.project-description');
+    const formattedDescription = project.description
+        .split('\n')
+        .map(line => {
+            const [boldPart, ...rest] = line.split(':');
+            const normalPart = rest.join(':').trim(); // in case ':' appears more than once
+            return `<p><strong>${boldPart}:</strong> ${normalPart}</p>`;
+        })
+        .join('');
+    descriptionContainer.innerHTML = formattedDescription;
     // Update tech stack
     const techStack = document.querySelector('.tech-stack');
     techStack.innerHTML = project.technologies
@@ -105,10 +127,10 @@ function loadProjectDetails(projectId) {
                 ${tech.name}
             </span>
         `).join('');
-    
+
     // Update links
     document.querySelector('.github-link').href = project.githubLink;
-    
+
     // Initialize slider
     updateSlider();
 }

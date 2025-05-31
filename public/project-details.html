@@ -1,22 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/project-details.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <title>Project Details - Neha Bhatt</title>
 </head>
+
 <body>
     <!-- Same navbar as main page -->
     <nav class="navbar">
-        <a href="index.html" class="logo">YourName._</a>
+        <a href="index.html" class="logo">NehaBhatt._</a>
         <div class="nav-links">
             <a href="index.html#home">01 // about me</a>
             <a href="index.html#expertise">02 // expertise</a>
-            <a href="index.html#work">03 // work</a>
+            <a href="index.html#work">03 // Projects</a>
             <a href="index.html#experience">04 // experience</a>
         </div>
     </nav>
@@ -78,16 +81,13 @@
         // Project data
         const projects = [
             {
-                id: 'project 1',
-                title: 'project 1',
-                description: 'Project 1 description'
+                id: 'cookeasy',
+                title: 'CookEasy',
             },
             {
-                id: 'project 2',
-                title: 'Project 2',
-                description: 'Project 2 description'
+                id: 'portfolio template',
+                title: 'Portfolio Template',
             }
-            
         ];
 
         // Function to get current project index
@@ -101,7 +101,7 @@
         function renderNextProjectNav() {
             const currentIndex = getCurrentProjectIndex();
             const nextProjectNav = document.getElementById('nextProjectNav');
-            
+
             // If this is the last project or invalid project, don't show navigation
             if (currentIndex === -1 || currentIndex === projects.length - 1) {
                 nextProjectNav.style.display = 'none';
@@ -109,7 +109,7 @@
             }
 
             const nextProject = projects[currentIndex + 1];
-            
+
             nextProjectNav.innerHTML = `
                 <a href="project-details.html?id=${nextProject.id}" class="next-project-nav">
                     <span class="next-project-label">Next Project</span>
@@ -146,4 +146,5 @@
         document.addEventListener('DOMContentLoaded', renderNextProjectNav);
     </script>
 </body>
-</html> 
+
+</html>
