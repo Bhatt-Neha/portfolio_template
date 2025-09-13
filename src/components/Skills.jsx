@@ -9,7 +9,7 @@ const Skills = () => {
       'Other': 'fas fa-tools',
       'React.js': 'fab fa-react',
       'JavaScript/Typescript': 'fab fa-js',
-      'HTML & CSS': 'fab fa-html5',
+      'HTML5/CSS': "fa-brands fa-html5",
       'Next.js': 'fas fa-n',
       'Redux': 'fab fa-react',
       'Node.js': 'fab fa-node-js',
@@ -20,8 +20,8 @@ const Skills = () => {
       'Git & GitHub': 'fab fa-git-alt',
       'CI/CD Pipelines': 'fas fa-code-branch',
       'Agile Methodology': 'fas fa-tasks',
-      'Problem Solving': 'fas fa-lightbulb',
-      'Good Communication': 'fas fa-comments',
+      'Jira':'fa-brands fa-jira',
+      'Client Communication': 'fas fa-comments',
       'AWS': 'fa-brands fa-aws'
     };
     return icons[skill] || 'fas fa-code';

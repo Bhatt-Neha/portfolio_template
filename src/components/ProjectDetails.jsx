@@ -2,50 +2,57 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 
 const projectsData = {
-  'project1': {
-    id: 'project1',
-    title: 'Project Title Here',
-    description: `✨ Feature 1: Brief description of what this feature does.
-✨ Feature 2: Highlight a unique functionality or benefit.
-✨ Feature 3: Mention how this improves user experience.
-✨ Feature 4: Showcase any special integration or API usage.
-✨ Feature 5: Summarize why this project is valuable.`,
+  'cookeasy': {
+    id: 'cookeasy',
+    title: 'CookEasy',
+    description: `✨ Chef Booking: Users can book chefs based on their preferred cuisines and time slots.
+✨ Recipe Exploration: Users can discover and filter recipes based on their cuisine preferences.
+✨ Instant Confirmation: Real-time email notifications are sent upon successful bookings.
+✨ Ratings & Reviews: Users can rate and review chefs, making it easier for others to choose the best.
+✨ Enhanced Experience: Ensures a seamless and user-friendly platform for personalized cooking and culinary exploration.`,
     technologies: [
-      { name: 'Technology1', icon: 'fab fa-react' }, // example icon
-      { name: 'Technology2', icon: 'fab fa-node-js' },
-      { name: 'Technology3', icon: 'fas fa-database' },
-      { name: 'Technology4', icon: 'fas fa-palette' },
+      { name: 'next.js', icon: 'fab fa-react' },
+      { name: 'Node.js', icon: 'fab fa-node-js' },
+      { name: 'PostgreSQL', icon: 'fas fa-database' },
+      { name: 'scss', icon: 'fas fa-palette' },
     ],
     images: [
-      '/images/project-1/screenshot1.png',
-      '/images/project-1/screenshot2.png',
-      '/images/project-1/screenshot3.png',
+      '/images/cookeasy/home.png',
+      '/images/cookeasy/register.png',
+      '/images/cookeasy/login.png',
+      '/images/cookeasy/recipe.png',
+      '/images/cookeasy/chef.png',
+      '/images/cookeasy/booking.png',
+      '/images/cookeasy/confirmation.png',
+      '/images/cookeasy/rating.png'
     ],
-    githubLink: ""
+    githubLink: "https://github.com/Bhatt-Neha/Cookeasy"
   },
-  'project2': {
-    id: 'project2',
-    title: 'Another Project Title',
-    description: `✨ Feature 1: Describe key functionality here.
-✨ Feature 2: Explain a technical implementation briefly.
-✨ Feature 3: Show how this project solves a problem.
-✨ Feature 4: Describe user experience improvements.
-✨ Feature 5: Mention scalability or reusability benefits.`,
+  'portfolio-template': {
+    id: 'portfolio-template',
+    title: 'Portfolio Template',
+    description: `✨ Dynamic & Reusable: Easily customizable for different specializations.
+✨ Config-Based Customization: Users can update their data through a config file.
+✨ Responsive UI: Ensures seamless performance across all devices.
+✨ Smooth Animations: Enhances user engagement with eye-catching effects.
+✨ Customizable Sections: Modify and personalize portfolio content effortlessly.
+✨ CSS-Powered Effects: Provides visually appealing transitions and designs`,
     technologies: [
-      { name: 'Technology1', icon: 'fab fa-js' },
-      { name: 'Technology2', icon: 'fab fa-html5' },
-      { name: 'Technology3', icon: 'fab fa-node' },
-      { name: 'Technology4', icon: 'fas fa-palette' },
+      { name: 'react', icon: 'fab fa-react' },
+      { name: 'javascript', icon: 'fab fa-js' },
+      { name: 'scss', icon: 'fas fa-palette' },
     ],
     images: [
-      '/images/project-2/screenshot1.png',
-      '/images/project-2/screenshot2.png',
-      '/images/project-2/screenshot3.png',
+      '/images/portfolio_template/about.png',
+      '/images/portfolio_template/skills.png',
+      '/images/portfolio_template/project.png',
+      '/images/portfolio_template/work.png',
+      '/images/portfolio_template/project.png',
+      '/images/portfolio_template/certificate.png',
     ],
-    githubLink: ""
+    githubLink: "https://github.com/Bhatt-Neha/portfolio_template"
   },
 };
-
 
 const ProjectDetails = () => {
   const { id } = useParams();

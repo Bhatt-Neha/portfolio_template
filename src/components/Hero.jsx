@@ -28,7 +28,7 @@ const Hero = () => {
             <i className="fas fa-envelope"></i>
             <span>{config.contact.email}</span>
           </a>
-          <a href={config.contact.linkedin} className="contact-chip">
+          <a href={`https://www.linkedin.com/in/${config.contact.linkedin}`} className="contact-chip">
             <i className="fab fa-linkedin"></i>
             <span>{config.contact.linkedin}</span>
           </a>

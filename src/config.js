@@ -1,12 +1,11 @@
 export const config = {
-    name: "Your Name Here", // Replace with your full name
-  
+  name: "Neha Bhatt",
   // Contact Information
   contact: {
-    email: "your-email@example.com",
-    linkedin: "Your LinkedIn Profile",
+    email: "nehabhatt2001@gmail.com",
+    linkedin: "neha-bhatt-501691221",
+    github: "https://github.com/Bhatt-Neha"
   },
-  
   // Navigation
   navItems: [
     { id: "home", label: "01 // About Me" },
@@ -19,8 +18,9 @@ export const config = {
   // Hero Section
   hero: {
     greeting: "Hi 🙋🏻‍♀️, I am",
-    name: "Your Name",
-    title: "Your Job Title",
+    name: "Neha Bhatt",
+    title: "Full Stack Software Engineer",
+    description: "A passionate developer creating amazing web experiences"
   },
 
   // Skills Section
@@ -29,68 +29,95 @@ export const config = {
     categories: [
       {
         name: "Frontend",
-        skills: ["List frontend skills here (React.js, HTML, CSS, etc.)"]
+        skills: ["React.js", "Next.js", "JavaScript/Typescript", "HTML5/CSS", "Redux"]
       },
       {
         name: "Backend",
-        skills: ["List backend skills here (Node.js, Express.js, Databases)"]
+        skills: ["Node.js", "Express.js", " RESTful APIs", "MongoDB", "PostgreSQL"]
       },
       {
         name: "Other",
-        skills: ["List other skills here (Git, AWS, Agile, etc.)"]
+        skills: ["Git & GitHub", "AWS", "Agile Methodology", "Jira", "Client Communication"]
       }
     ]
   },
 
+
   // Projects Section
   projects: [
     {
-      id: "project1",
-      title: "Project Name",
-      description: "Brief description of what this project does and what problem it solves.",
-      image: "/images/your-project-image.png",
+      id: "cookeasy",
+      title: "CookEasy",
+      description: "CookEasy lets users book chefs by cuisine and time slot, explore recipes with advanced filtering, and receive instant booking confirmations. Users can also rate and review chefs for better recommendations. It's a seamless platform for personalized cooking experiences and discovering new recipes effortlessly.",
+      image: "/images/cookeasy/image.png",
     },
     {
-      id: "project2",
-      title: "Another Project Name",
-      description: "Brief description of this project, its features, and impact.",
-      image: "/images/another-project-image.png",
+      id: "portfolio-template",
+      title: "Portfolio Template",
+      description: "Portfolio-Template is a dynamic and reusable template designed for users to create personalized portfolios based on their specialization. It features a fully responsive UI with eye-catching animations for an engaging experience. Users can seamlessly add their data, enhancing their portfolio with visually appealing effects powered by CSS.",
+      image: "/images/portfolio_template/about.png",
     }
   ],
+
 
   // Experience Section
   experience: [
     {
-      company: "Company Name",
-      position: "Job Title",
-      duration: "Start Date – End Date",
-      description: `Describe your role, responsibilities, and achievements here.
-Focus on results, tools used, and impact.`,
-      skills: ["Relevant skills/technologies you used here"]
+      company: "Tech Holding",
+      position: "Software Engineer",
+      duration: "April 2023 - Present",
+      description: `Implemented Next.js for SEO optimization and code-splitting, improving performance and discoverability.
+Built PayPal payment integration, Twilio-based real-time SMS alerts, and interactive, role-based dashboards.
+Worked on UI development and API integrations to deliver seamless end-to-end functionality.
+Skilled in client interaction and communication, gathering requirements and providing timely updates.
+Applied Agile methodologies, actively participating in sprint planning, daily stand-ups, and retrospectives.`,
+      skills: ["React", "Next.js", "TypeScript", "Node.js", "Paypal Integration", "postgresql", "AWS"]
     },
     {
-      company: "Company Name",
-      position: "Internship Title",
-      duration: "Start Date – End Date",
-      description: `Describe what you worked on during this internship.
-Include contributions and key learnings.`,
-      skills: ["Skills used during internship"]
+      company: "Tech Holding",
+      position: "Software Developer Intern",
+      duration: "Jan 2023 - Apr 2023",
+      description: `Developed an interactive dashboard to streamline onboarding and offboarding processes.
+Integrated Harvest API to fetch and display user activity logs.
+Implemented HOC functionality for reusable and maintainable components.
+Collaborated with senior developers to implement best practices and participated in daily stand-ups.
+Developed a software management system to enhance the new hire process.`,
+      skills: ["React", "Next.js", "TypeScript/Javascript", "Node.js", "scss"]
     }
   ],
+
 
   // Certifications Section
   certifications: [
     {
-      name: "Certification Name",
-      issuer: "Issuing Organization",
-      date: "Year",
-      description: "Short description of what this certification covers."
+      name: "SQL Fundamentals",
+      issuer: " HackerRank",
+      date: "2025",
+      description: "Covering concepts of SQL, database design, and query optimization.",
     },
     {
-      name: "Another Certification",
-      issuer: "Issuing Organization",
-      date: "Year",
-      description: "Short description of this certification."
+      name: "AWS Certified Solutions Architect Associate",
+      issuer: "Amazon Web Services",
+      date: "2024",
+      description: "Explored different AWS services and its usage",
+    },
+    {
+      name: "AWS Certified AI Practioner",
+      issuer: "Amazon Web Services",
+      date: "2024",
+      description: "Advanced understanding of generative AI models and their implementation on AWS.",
+    },
+    {
+      name: "Microsoft Career Essentials",
+      issuer: "Microsoft",
+      date: "2024",
+      description: "Professional development and technical skills for modern software development.",
+    },
+    {
+      name: "AWS Certified Generative AI",
+      issuer: "Amazon Web Services",
+      date: "2023",
+      description: "Advanced understanding of generative AI models and their implementation on AWS.",
     }
   ],
 };
