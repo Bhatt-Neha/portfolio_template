@@ -1,0 +1,146 @@
+.certifications {
+  padding: 100px 4rem;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .title-underline {
+    width: 80px;
+    height: 4px;
+    background: #8A2BE2;
+    margin: 0 auto 40px;
+  }
+
+  .certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .certification-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    &:hover {
+      transform: translateY(-5px);
+      background: rgba(255, 255, 255, 0.08);
+      border-color: var(--primary-color);
+
+      .certification-icon {
+        transform: scale(1.1);
+        opacity: 0.3;
+      }
+    }
+
+    .certification-content {
+      position: relative;
+      z-index: 2;
+
+      .certification-title {
+        font-size: 1.5rem;
+        color: var(--text-color);
+        margin-bottom: 1rem;
+      }
+
+      .certification-issuer {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--primary-color);
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .certification-description {
+        color: var(--text-color);
+        opacity: 0.8;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .certification-date {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--light-text);
+        font-size: 0.9rem;
+      }
+    }
+
+    .certification-icon {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      font-size: 2rem;
+      color: var(--primary-color);
+      opacity: 0.2;
+      transition: all 0.3s ease;
+    }
+
+  }
+}
+
+
+// Responsive Design for Certifications
+@media (max-width: 1024px) {
+  .certifications {
+    padding: 80px 2rem;
+  }
+
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .certification-title {
+    font-size: 1.25rem;
+  }
+}
+
+// Touch Device Optimizations
+@media (hover: none) {
+  .certification-card::after {
+    position: static;
+    display: inline-block;
+    margin-top: 1rem;
+    opacity: 1;
+    transform: none;
+  }
+
+  .certification-card:hover,
+  .contact-link:hover,
+  .btn:hover {
+    transform: none;
+  }
+}

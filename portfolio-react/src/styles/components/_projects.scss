@@ -1,0 +1,284 @@
+.projects-section {
+  padding: 100px 4rem;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+
+  .section-header {
+    max-width: 800px;
+    margin: 0 auto 80px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .title-underline {
+    width: 80px;
+    height: 4px;
+    background: #8A2BE2;
+    margin: 0 auto 40px;
+  }
+
+  .section-description {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--text-color);
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .project-item {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .project-preview {
+      flex: 1;
+      max-width: 700px;
+      position: relative;
+      margin-bottom: 2rem;
+
+      .laptop-mockup {
+        padding: 4% 6%;
+        margin: 0 auto;
+        max-width: 800px;
+
+        .screen {
+          background: #000;
+          border-radius: 3% 3% 0.5% 0.5% / 5%;
+          margin: 0 auto;
+          position: relative;
+          width: 80%;
+
+          &:before {
+            border: 2px solid #cacacc;
+            border-radius: 3% 3% 0.5% 0.5% / 5%;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.8) inset, 0 0 1px 2px rgba(255, 255, 255, 0.3) inset;
+            content: "";
+            display: block;
+            padding-top: 67%;
+          }
+
+          &:after {
+            content: "";
+            border-top: 2px solid rgba(255, 255, 255, 0.15);
+            position: absolute;
+            bottom: 0.75%;
+            left: 0.5%;
+            padding-top: 1%;
+            width: 99%;
+          }
+
+          .viewport {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            top: 0;
+            margin: 4.3% 3.2%;
+            background: #333;
+            transition: background-position 3s ease;
+            background-position: 0 0;
+            background-size: 100% auto;
+            overflow: hidden;
+            cursor: pointer;
+
+            &:hover {
+              background-position: 0 100%;
+            }
+
+            &:after {
+              background: radial-gradient(circle at right bottom, transparent 75%, rgba(255, 255, 255, 0.05) 75%, transparent);
+              bottom: 0;
+              content: "";
+              left: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 4px;
+            }
+          }
+        }
+
+        .base {
+          position: relative;
+          width: 100%;
+
+          &:before {
+            content: "";
+            display: block;
+            padding-top: 3.3%;
+            background: linear-gradient(#eaeced, #edeef0 55%, #fff 55%, #8a8b8f 56%, #999ba0 61%, #4B4B4F 84%, #262627 89%, rgba(0, 0, 0, .01) 98%);
+            border-radius: 0 0 10% 10%/ 0 0 50% 50%;
+          }
+
+          &::after {
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(255, 255, 255, 0.8) 0.5%, rgba(0, 0, 0, 0.4) 3.3%, transparent 15%, rgba(255, 255, 255, 0.8) 50%, transparent 85%, rgba(0, 0, 0, 0.4) 96.7%, rgba(255, 255, 255, 0.8) 99.5%, rgba(0, 0, 0, 0.5) 100%);
+            content: "";
+            height: 53%;
+            position: absolute;
+            top: 0;
+            width: 100%;
+          }
+        }
+
+        .notch {
+          background: #ddd;
+          border-radius: 0 0 7% 7% / 0 0 95% 95%;
+          box-shadow: -5px -1px 3px rgba(0, 0, 0, 0.2) inset, 5px -1px 3px rgba(0, 0, 0, 0.2) inset;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: -3.5%;
+          z-index: 2;
+          position: relative;
+          width: 14%;
+
+          &:before {
+            content: "";
+            display: block;
+            padding-top: 10%;
+          }
+        }
+      }
+    }
+
+    .project-content {
+      flex: 1;
+      text-align: left;
+      max-width: 500px;
+
+      .project-title {
+        font-size: 32px;
+        color: var(--text-color);
+        margin-bottom: 20px;
+      }
+
+      .project-description {
+        font-size: 16px;
+        line-height: 1.8;
+        color: var(--text-color);
+        opacity: 0.9;
+        margin-bottom: 30px;
+      }
+
+      .case-study-btn {
+        display: inline-block;
+        padding: 15px 40px;
+        background: #8A2BE2;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3);
+        }
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .projects-section {
+    padding: 80px 2rem;
+  }
+
+  .project-item {
+    gap: 40px;
+  }
+
+  .project-preview {
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 992px) {
+  .project-item,
+  .project-item:nth-child(even) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-content {
+    text-align: center;
+    max-width: 600px;
+  }
+  
+  .project-preview {
+    width: 100%;
+  }
+
+  .laptop-mockup {
+    padding: 3% 4%;
+  }
+  
+  .laptop-mockup img {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 36px;
+  }
+
+  .section-description {
+    font-size: 16px;
+  }
+
+  .projects-grid {
+    gap: 80px;
+  }
+
+  .project-content .project-title {
+    font-size: 28px;
+  }
+
+  .laptop-mockup {
+    padding: 2% 3%;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-section {
+    padding: 60px 1rem;
+  }
+
+  .section-title {
+    font-size: 30px;
+  }
+
+  .case-study-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
